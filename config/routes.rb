@@ -1,4 +1,7 @@
 Healthme::Application.routes.draw do
+  resources :businesses
+
+
   mount StripeEvent::Engine => '/stripe'
   get "content/gold"
   get "content/silver"
