@@ -1,4 +1,7 @@
 Healthme::Application.routes.draw do
+  resources :healths
+
+
   resources :doctors
 
 

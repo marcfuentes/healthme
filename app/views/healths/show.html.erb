@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @health.name %>
+</p>
+
+<p>
+  <b>Speciality:</b>
+  <%= @health.speciality %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @health.address %>
+</p>
+
+<p>
+  <b>Declaration:</b>
+  <%= @health.declaration %>
+</p>
+
+<p>
+  <b>Education:</b>
+  <%= @health.education %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @health.review %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @health.photo %>
+</p>
+
+
+<%= link_to 'Edit', edit_health_path(@health) %> |
+<%= link_to 'Back', healths_path %>
