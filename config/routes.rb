@@ -1,11 +1,4 @@
-Healthme::Application.routes.draw do
-  resources :healths
-
-
-  resources :doctors
-
-
-  resources :businesses
+Healthme::Application.routes.draw do  match 'map' => "medics#map"
 
 
   mount StripeEvent::Engine => '/stripe'
@@ -22,4 +15,6 @@ Healthme::Application.routes.draw do
     put 'update_card', :to => 'registrations#update_card'
   end
   resources :users
+  resources :cities
+  resources :medics
 end

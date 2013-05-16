@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @medic.name %>
+</p>
+
+<p>
+  <b>Information:</b>
+  <%= @medic.information %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @medic.address %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @medic.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @medic.latitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @medic.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_medic_path(@medic) %> |
+<%= link_to 'Back', medics_path %>

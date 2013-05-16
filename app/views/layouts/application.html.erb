@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +13,20 @@
     <div class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
-          <a class="brand" href="index.html"> <img src="http://img.photobucket.com/albums/v234/marfue179/logonavbar_zps051324af.jpg" alt="Health_Me_logo_transparent"></a>
+          <a class="brand" href="http://localhost:3000"> <img src="http://img.photobucket.com/albums/v234/marfue179/logonavbar_zps051324af.jpg" alt="Health_Me_logo_transparent"></a>
           <%= render 'layouts/navigation' %>
            <ul class="nav">
-             <li><%= link_to "Alternative medicine", "/healths" %></li>
-             <li><%= link_to "Beauty", "/businesses" %></li>
+             <li><%= link_to "Medics", "/medics" %></li>
+             <li><%= link_to "Cities", "/cities" %></li>
            </ul>
         </div>
       </nav>
     </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+    
+    
+<%= yield %>
+<%= render 'layouts/footer' %>
+<%= yield :scripts %>
+
   </body>
 </html>

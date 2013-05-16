@@ -1,0 +1,34 @@
+<h1>Listing medics</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Information</th>
+    <th>Address</th>
+    <th>Longitude</th>
+    <th>Latitude</th>
+    <th>Gmaps</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medics.each do |medic| %>
+  <tr>
+    <td><%= medic.name %></td>
+    <td><%= medic.information %></td>
+    <td><%= medic.address %></td>
+    <td><%= medic.longitude %></td>
+    <td><%= medic.latitude %></td>
+    <td><%= medic.gmaps %></td>
+    <td><%= link_to 'Show', medic %></td>
+    <td><%= link_to 'Edit', edit_medic_path(medic) %></td>
+    <td><%= link_to 'Destroy', medic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medic', new_medic_path %>
+<%= gmaps4rails(@json) %>
