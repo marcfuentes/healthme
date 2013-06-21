@@ -15,6 +15,6 @@ Healthme::Application.routes.draw do  match 'map' => "medics#map"
     put 'update_card', :to => 'registrations#update_card'
   end
   resources :users
-  resources :cities
+  resources :clinics
   resources :medics
 end

@@ -1,3 +1,5 @@
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -30,6 +32,11 @@
   <%= @medic.gmaps %>
 </p>
 
+<p>
+  <b>Picture:</b>
+  <%= @medic.picture %>
+</p>
 
 <%= link_to 'Edit', edit_medic_path(@medic) %> |
 <%= link_to 'Back', medics_path %>
+</div>

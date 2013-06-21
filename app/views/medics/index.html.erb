@@ -1,27 +1,52 @@
-<h1>Listing medics</h1>
+<div class="container">
+<%= gmaps4rails(@json) %>
 
-<table>
+
+<%- model_class = Medic -%>
+<div class="page-header">
+    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Name</th>
-    <th>Information</th>
+    
     <th>Address</th>
-    <th>Longitude</th>
-    <th>Latitude</th>
-    <th>Gmaps</th>
+    
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+ </thead>
+  <tbody>
 <% @medics.each do |medic| %>
   <tr>
     <td><%= medic.name %></td>
-    <td><%= medic.information %></td>
+
     <td><%= medic.address %></td>
-    <td><%= medic.longitude %></td>
-    <td><%= medic.latitude %></td>
-    <td><%= medic.gmaps %></td>
+    
     <td><%= link_to 'Show', medic %></td>
+
+    <!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+
+
     <td><%= link_to 'Edit', edit_medic_path(medic) %></td>
     <td><%= link_to 'Destroy', medic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -31,4 +56,4 @@
 <br />
 
 <%= link_to 'New Medic', new_medic_path %>
-<%= gmaps4rails(@json) %>
+</div>

@@ -5,6 +5,7 @@ class MedicsController < ApplicationController
     @medics = Medic.all
     @json = Medic.all.to_gmaps4rails
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @medics }
@@ -82,3 +83,4 @@ class MedicsController < ApplicationController
     end
   end
 end
+

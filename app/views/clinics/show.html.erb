@@ -1,0 +1,43 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @clinic.name %>
+</p>
+
+<p>
+  <b>Information:</b>
+  <%= @clinic.information %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @clinic.address %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= image_tag(@clinic.picture_url, :width => 600) if @clinic.picture.present? %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @clinic.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @clinic.latitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @clinic.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+<%= link_to 'Back', clinics_path %>
+</div>
