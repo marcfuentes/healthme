@@ -110,6 +110,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.22)
+    mini_magick (3.6.0)
+      subexec (~> 0.2.1)
     multi_json (1.7.2)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
@@ -176,6 +178,7 @@ GEM
     stripe_event (0.6.0)
       rails (>= 3.1)
       stripe (~> 1.6)
+    subexec (0.2.3)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -219,6 +222,7 @@ DEPENDENCIES
   jquery-rails
   launchy (>= 2.2.0)
   libv8 (>= 3.11.8)
+  mini_magick
   quiet_assets (>= 1.0.2)
   rails (= 3.2.12)
   rolify (>= 3.2.0)

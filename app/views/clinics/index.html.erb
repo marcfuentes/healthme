@@ -5,11 +5,11 @@
 
 <table class="table table-striped">
   <tr>
-    <th>Name</th>
-    
-    <th>Address</th>
     <th>Picture</th>
+    <th>Name</th>
+    <th>Address</th>
     
+
     <th></th>
     <th></th>
     <th></th>
@@ -17,12 +17,12 @@
 
 <% @clinics.each do |clinic| %>
   <tr>
+    <td><%= image_tag clinic.picture_url(:thumb) if clinic.picture? %></td>
     <td><%= clinic.name %></td>
-    
     <td><%= clinic.address %></td>
-    <td><%= clinic.picture %></td>
     
-    <td><%= link_to 'Show', clinic %></td>
+    
+    <td><%= link_to 'Show', clinic, class: "btn btn-custom btn-small" %></td>
     <td><%= link_to 'Edit', edit_clinic_path(clinic) %></td>
     <td><%= link_to 'Destroy', clinic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
