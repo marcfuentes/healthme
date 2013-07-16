@@ -1,43 +1,21 @@
+
 <div class="container">
+  <div class="row">
+    <div class="span9 offset2">
+      <div class="well well large">
+      <%= image_tag(@clinic.picture_url, :width => "50%") if @clinic.picture.present? %>
+        </b><%= @clinic.name %></p>
+        </b><%= @clinic.information %></p>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @clinic.name %>
-</p>
-
-<p>
-  <b>Information:</b>
-  <%= @clinic.information %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @clinic.address %>
-</p>
-
-<p>
-  <b>Picture:</b>
-  <%= image_tag(@clinic.picture_url, :width => 600) if @clinic.picture.present? %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @clinic.longitude %>
-</p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @clinic.latitude %>
-</p>
-
-<p>
-  <b>Gmaps:</b>
-  <%= @clinic.gmaps %>
-</p>
-
-
-<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
-<%= link_to 'Back', clinics_path %>
+          <address>
+          <strong><b>Nombre: </b><%= @clinic.name %></strong><br>
+          <b>Dirección: </b><%= @clinic.address %><br>
+  
+          <%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+          <%= link_to 'Destroy', @clinic, confirm: 'Are you sure?', method: :delete %> |
+          <%= link_to 'Back', clinics_path %>
+       
+      </div>
+    </div>
+  </div>
 </div>
